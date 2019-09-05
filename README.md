@@ -1,29 +1,12 @@
-# dev-place
+# DevPlace
 
-## Project setup
-```
-npm install
-```
+The DevPlace project is a kubernetes dashboard to bring up and manage workspaces for developers.
+A workspaces is comprised of serveral services in it's own cluster.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+# Example
+Working on a large project project using a messaging bus and several microservices.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Ideally a developer would not need to modify or run more that 1 microservice at a time.
+However, due to poor design, or constrained resources, this happens.
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+This is DevPlace comes in. A team member can bring up a workspace with all the resources that they could want within seconds.

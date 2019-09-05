@@ -17,10 +17,10 @@ paths:
   /workspace/: 
     get:
       $ref: './includes/workspace.yml#/getWorkspaces'
-  /workspace/template/{serviceid}: 
+  /template/workspace/{serviceid}: 
     get:
       $ref: './includes/workspace.yml#/getWorkspaceTemplateByID'
-  /workspace/template/: 
+  /template/workspace/: 
     get:
       $ref: './includes/workspace.yml#/getWorkspaceTemplates'
   /workspace/{workspaceid}/service/{serviceid}: 
@@ -29,9 +29,9 @@ paths:
   /workspace/{workspaceid}/service/: 
     get:
       $ref: './includes/service.yml#/getServices'
-  /service/template/{serviceid}: 
+  /template/service/{serviceid}: 
     get:
       $ref: './includes/service.yml#/getServiceTemplateByID'
-  /service/template/: 
+  /template/service/: 
     get:
       $ref: './includes/service.yml#/getServiceTemplates'
