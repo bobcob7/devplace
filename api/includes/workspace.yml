@@ -1,0 +1,28 @@
+getUserByID:
+  operationId: getWorkspaceByID
+  parameters: 
+  - name: workspaceid
+    in: path
+    required: true
+    schema:
+      type: string
+  responses: 
+    '200':
+      description: The workspace object
+      content:
+        application/json:
+          schema: 
+            $ref: './objects.yml#/workspace'
+    '404':
+      description: User not found
+getUsers:
+  operationId: getWorkspaces
+  responses: 
+    '200':
+      description: A list of workspace objects
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: './objects.yml#/workspace'

@@ -1,0 +1,28 @@
+getUserByID:
+  operationId: getUserByID
+  parameters: 
+  - name: userid
+    in: path
+    required: true
+    schema:
+      type: string
+  responses: 
+    '200':
+      description: The user object
+      content:
+        application/json:
+          schema: 
+            $ref: './objects.yml#/user'
+    '404':
+      description: User not found
+getUsers:
+  operationId: getUsers
+  responses: 
+    '200':
+      description: A list of user objects
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: './objects.yml#/user'

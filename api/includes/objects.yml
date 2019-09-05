@@ -1,0 +1,71 @@
+user:
+  type: object
+  required:
+    - userid
+    - email
+    - username
+  properties:
+    userid:
+      type: string
+      format: uuid
+    email:
+      type: string
+      format: email
+      example: bobcob333@gmail.com
+    username:
+      type: string
+      example: bobcob7
+    profileURL:
+      type: string
+      format: uri
+      example: https://bobcob7.github.io/assets/eric_profile.png
+
+service:
+  type: object
+  required:
+    - serviceid
+    - name
+    - image
+  properties:
+    serviceid:
+      type: string
+      format: uuid
+    name:
+      type: string
+      example: go-ide
+    image:
+      type: string
+      example: code-server:latest
+    registry:
+      type: string
+      example: hub.docker.com
+    ports:
+      type: string
+      example: 8080:8080
+
+workspace:
+  type: object
+  required:
+    - workspaceid
+    - name
+    - description
+    - services
+    - webPort
+  properties:
+    workspaceid:
+      type: string
+      format: uuid
+    name:
+      type: string
+      format: email
+      example: DevPlace
+    description:
+      type: string
+      example: Workplace for developing and testing the DevPlace application
+    webPort:
+      type: string
+      example: code-server:8080
+    services:
+      type: array
+      items:
+        $ref: './objects.yml#/service'

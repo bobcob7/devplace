@@ -1,0 +1,37 @@
+openapi: 3.0.0
+info: 
+  title: DevPlace API
+  version: 0.0.1
+servers:
+- url: https://bobcob7.github.io/api/v1
+paths:
+  /user/{userid}: 
+    get:
+      $ref: './includes/user.yml#/getUserByID'
+  /user/: 
+    get:
+      $ref: './includes/user.yml#/getUsers'
+  /workspace/{workspaceid}: 
+    get:
+      $ref: './includes/workspace.yml#/getWorkspaceByID'
+  /workspace/: 
+    get:
+      $ref: './includes/workspace.yml#/getWorkspaces'
+  /workspace/template/{serviceid}: 
+    get:
+      $ref: './includes/workspace.yml#/getWorkspaceTemplateByID'
+  /workspace/template/: 
+    get:
+      $ref: './includes/workspace.yml#/getWorkspaceTemplates'
+  /workspace/{workspaceid}/service/{serviceid}: 
+    get:
+      $ref: './includes/service.yml#/getServiceByID'
+  /workspace/{workspaceid}/service/: 
+    get:
+      $ref: './includes/service.yml#/getServices'
+  /service/template/{serviceid}: 
+    get:
+      $ref: './includes/service.yml#/getServiceTemplateByID'
+  /service/template/: 
+    get:
+      $ref: './includes/service.yml#/getServiceTemplates'
